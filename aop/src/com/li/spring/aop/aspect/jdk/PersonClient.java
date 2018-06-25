@@ -11,6 +11,7 @@ public class PersonClient {
         PersonIntercepter personIntercepter=new PersonIntercepter(personDaoImpl,transaction);
         PersonDao personDao= (PersonDao) Proxy.newProxyInstance(personDaoImpl.getClass().getClassLoader(),personDaoImpl.getClass().getInterfaces(),personIntercepter);
         personDao.savePerson();
+        123456
 
     }
 }
